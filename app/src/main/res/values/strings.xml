@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Food App Test</string>
+    <string name="emptyString">Your Cart is empty</string>
+</resources>
