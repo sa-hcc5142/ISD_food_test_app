@@ -24,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
 
         // Only Firebase Auth - no Database/Firestore
         mAuth = FirebaseAuth.getInstance();
-        
+
         // Fix Firebase locale warning
         FirebaseAuth.getInstance().useAppLanguage();
 
