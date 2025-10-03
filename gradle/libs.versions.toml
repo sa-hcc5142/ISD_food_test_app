@@ -12,6 +12,7 @@ googleGmsGoogleServices = "4.4.2"
 firebaseBom = "33.1.2"
 room = "2.6.1"
 lifecycle = "2.7.0"
+roomCommonJvm = "2.8.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -36,6 +37,7 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 # Lifecycle
 lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "lifecycle" }
 lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata", version.ref = "lifecycle" }
+room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
