@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class BaseActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
-    public String TAG = "uilover";
+    public String TAG = "Food_App_Test";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
