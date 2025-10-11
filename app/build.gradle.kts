@@ -43,23 +43,50 @@ dependencies {
 //    implementation ("com.google.android.material:material:1.12.0")
     implementation ("com.google.code.gson:gson:2.11.0")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
-    
+
     // Firebase BOM to manage versions and prevent conflicts
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.firestore)
-    
+
     // Room dependencies for Java
     implementation(libs.room.runtime)
-    implementation(libs.room.common.jvm)
+    implementation(libs.room.ktx)
+    implementation(libs.play.services.location)
     annotationProcessor(libs.room.compiler)
-    
+
     // Lifecycle dependencies
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.livedata)
-    
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    // ...existing code...
+
+    // Add SQLite dependency for Room
+    implementation(libs.sqlite)
+    implementation(libs.sqliteKtx)
+
+
+    // Room dependencies for Java
+//    implementation(libs.room.common.jvm)
+    annotationProcessor(libs.room.compiler)
+
+//    implementation ("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
+
 }
+
+configurations.all {
+    resolutionStrategy {
+        force("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
+    }
+}
+
+
+//configurations.all {
+//    resolutionStrategy {
+//        force ("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
+//    }
+//}
